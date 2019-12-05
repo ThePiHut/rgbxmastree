@@ -101,7 +101,8 @@ class Tree(SourceMixin, SPIDevice):
     def close(self):
         super(Tree, self).close()
 
+
 if __name__ == '__main__':
     from time import sleep
 
-    tree = Tree(25, mosi_pin=12, clock_pin=25)
+    tree = Tree()

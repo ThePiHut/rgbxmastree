@@ -7,7 +7,7 @@ Code examples for the RGB Xmas Tree
 Start by downloading the xmas tree file. Open a terminal and type:
 
 ```bash
-wget http://goo.gl/rgbxmastree -O tree.py
+wget https://bit.ly/2Lr9CT3 -O tree.py
 ```
 
 When you write your own Python code, make sure you keep this file in the same
