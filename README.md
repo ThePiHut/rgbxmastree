@@ -119,8 +119,6 @@ def random_color():
 Then create a second function to create a list of 25 random colours:
 
 ```python
-from random import random
-
 def random_colors(n):
     return [random_color() for i in range(n)]
 ```
