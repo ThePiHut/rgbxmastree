@@ -1,9 +1,10 @@
 from gpiozero import SPIDevice, SourceMixin
 from colorzero import Color, Hue
 from statistics import mean
+from time import sleep
 
 
-class Pixel(SourceMixin):
+class Pixel:
     def __init__(self, parent, index):
         super(Pixel, self).__init__()
         self.parent = parent
@@ -37,7 +38,7 @@ class Pixel(SourceMixin):
 
 class RGBXmasTree(SourceMixin, SPIDevice):
     def __init__(self, pixels=25, brightness=0.5, mosi_pin=12, clock_pin=25, *args, **kwargs):
-        super(RGBXmasTree, self).__init__(mosi_pin=12, clock_pin=25, *args, **kwargs)
+        super(RGBXmasTree, self).__init__(mosi_pin=mosi_pin, clock_pin=clock_pin, *args, **kwargs)
         self._all = [Pixel(parent=self, index=i) for i in range(pixels)]
         self._value = [(0, 0, 0)] * pixels
         self.brightness = brightness
@@ -103,6 +104,4 @@ class RGBXmasTree(SourceMixin, SPIDevice):
 
 
 if __name__ == '__main__':
-    from time import sleep
-
-    RGBXmasTree = RGBXmasTree()
+    tree = RGBXmasTree()
