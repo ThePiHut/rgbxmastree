@@ -6,7 +6,6 @@ from time import sleep
 
 class Pixel:
     def __init__(self, parent, index):
-        super(Pixel, self).__init__()
         self.parent = parent
         self.index = index
 
@@ -26,7 +25,7 @@ class Pixel:
 
     @color.setter
     def color(self, c):
-        r, b, g = c
+        r, g, b = c
         self.value = (r, g, b)
 
     def on(self):
