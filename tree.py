@@ -35,9 +35,9 @@ class Pixel(SourceMixin):
         self.value = (0, 0, 0)
 
 
-class Tree(SourceMixin, SPIDevice):
-    def __init__(self, pixels, brightness=0.5, *args, **kwargs):
-        super(Tree, self).__init__(*args, **kwargs)
+class RGBXmasTree(SourceMixin, SPIDevice):
+    def __init__(self, pixels=25, brightness=0.5, mosi_pin=12, clock_pin=25, *args, **kwargs):
+        super(RGBXmasTree, self).__init__(mosi_pin=12, clock_pin=25, *args, **kwargs)
         self._all = [Pixel(parent=self, index=i) for i in range(pixels)]
         self._value = [(0, 0, 0)] * pixels
         self.brightness = brightness
@@ -99,10 +99,10 @@ class Tree(SourceMixin, SPIDevice):
         self.value = ((0, 0, 0),) * len(self)
 
     def close(self):
-        super(Tree, self).close()
+        super(RGBXmasTree, self).close()
 
 
 if __name__ == '__main__':
     from time import sleep
 
-    tree = Tree()
+    RGBXmasTree = RGBXmasTree()
