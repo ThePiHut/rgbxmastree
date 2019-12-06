@@ -100,32 +100,28 @@ To control a specific pixel, you can access it by its index number (0-24):
 tree[0].color = (0, 1, 0)
 ```
 
-## Random sparkles
+## Examples
 
-To randomly colour all the LEDs repeatedly, you need to set the value of the
-whole tree to a list of 25 random colour values. Start by writing a function to
-generate a random colour:
+## RGB cycle
 
-```python
-from random import random
+Cycle through red, green and blue, changing all pixels together
 
-def random_color():
-    r = random()
-    g = random()
-    b = random()
-    return (r, g, b)
-```
+- [rgb.py](examples/rgb.py)
 
-Then create a second function to create a list of 25 random colours:
+### One-by-one
 
-```python
-def random_colors(n):
-    return [random_color() for i in range(n)]
-```
+Cycle through red, green and blue, changing pixel-by-pixel
 
-Now write a loop to set the tree's value to this list:
+- [onebyone.py](examples/onebyone.py)
 
-```python
-while True:
-    tree.value = random_colors(25)
-```
+### Hue cycle
+
+Cycle through hues forever
+
+- [huecycle.py](examples/huecycle.py)
+
+### Random sparkles
+
+Randomly sparkle all the pixels
+
+- [randomsparkles.py](examples/randomsparkles.py)
