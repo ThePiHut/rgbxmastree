@@ -84,13 +84,23 @@ tree[0].color = (0, 1, 0)
 
 ## Change the brightness
 
-You can change the brightness from 0 to 1 - the default is 0.5. You set this
+You can change the brightness from 0 to 1 - the default is 0.5. You can set this
 when initialising your tree:
 
 ```python
 from tree import RGBXmasTree
 
 tree = RGBXmasTree(brightness=0.1)
+```
+
+Alternatively, you can change it after initialisation:
+
+```python
+from tree import RGBXmasTree
+
+tree = RGBXmasTree()
+
+tree.brightness = 0.1
 ```
 
 You'll find that 1 is _extremely bright_ and even 0.1 is plenty bright enough if
