@@ -1,5 +1,5 @@
 from tree import RGBXmasTree
-from colorzero import Hue
+from colorzero import Color, Hue
 
 tree = RGBXmasTree()
 
