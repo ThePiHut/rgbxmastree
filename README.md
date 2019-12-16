@@ -13,32 +13,14 @@ wget https://bit.ly/2Lr9CT3 -O tree.py
 When you write your own Python code, make sure you keep this file in the same
 folder.
 
-Open a Python shell or IDE (like Mu, Thonny or IDLE) and import `RGBXmasTree`:
-
-```python
-from tree import RGBXmasTree
-```
-
-Initialise your tree:
+Open a Python shell or IDE (like Mu, Thonny or IDLE), import `RGBXmasTree` and
+initialise your tree:
 
 ```python
 from tree import RGBXmasTree
 
 tree = RGBXmasTree()
 ```
-
-## Change the brightness
-
-You can change the brightness from 0 to 1 - the default is 0.5:
-
-```python
-from tree import RGBXmasTree
-
-tree = RGBXmasTree(brightness=0.1)
-```
-
-You'll find that 1 is _extremely bright_ and even 0.1 is plenty bright enough if
-the tree is on your desk :)
 
 ## Change the colour
 
@@ -99,6 +81,20 @@ To control a specific pixel, you can access it by its index number (0-24):
 ```python
 tree[0].color = (0, 1, 0)
 ```
+
+## Change the brightness
+
+You can change the brightness from 0 to 1 - the default is 0.5. You set this
+when initialising your tree:
+
+```python
+from tree import RGBXmasTree
+
+tree = RGBXmasTree(brightness=0.1)
+```
+
+You'll find that 1 is _extremely bright_ and even 0.1 is plenty bright enough if
+the tree is on your desk :)
 
 ## Examples
 
