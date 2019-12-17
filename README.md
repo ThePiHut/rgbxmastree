@@ -10,6 +10,9 @@ Start by downloading the xmas tree file. Open a terminal and type:
 wget https://bit.ly/2Lr9CT3 -O tree.py
 ```
 
+Test the tree by running `python3 tree.py` (or running it from an IDE like Mu,
+Thonny or IDLE). All the lights should come on (white).
+
 When you write your own Python code, make sure you keep this file in the same
 folder.
 
@@ -20,8 +23,7 @@ using Raspbian Lite, you'll need to install gpiozero with:
 sudo apt install python3-gpiozero
 ```
 
-Open a Python shell or IDE (like Mu, Thonny or IDLE), import `RGBXmasTree` and
-initialise your tree:
+Open a Python shell or IDE, import `RGBXmasTree` and initialise your tree:
 
 ```python
 from tree import RGBXmasTree

@@ -12,5 +12,8 @@ def random_color():
 def random_colors(n):
     return [random_color() for i in range(n)]
 
-while True:
-    tree.value = random_colors(25)
+try:
+    while True:
+        tree.value = random_colors(25)
+except KeyboardInterrupt:
+    tree.close()

@@ -5,6 +5,9 @@ tree = RGBXmasTree()
 
 colors = [Color('red'), Color('green'), Color('blue')] # add more if you like
 
-while True:
-    for color in colors:
-        tree.color = color
+try:
+    while True:
+        for color in colors:
+            tree.color = color
+except KeyboardInterrupt:
+    tree.close()
