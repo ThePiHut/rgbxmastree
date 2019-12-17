@@ -13,6 +13,13 @@ wget https://bit.ly/2Lr9CT3 -O tree.py
 When you write your own Python code, make sure you keep this file in the same
 folder.
 
+If you're using Raspbian Desktop, you don't need to install anything. If you're
+using Raspbian Lite, you'll need to install gpiozero with:
+
+```bash
+sudo apt install python3-gpiozero
+```
+
 Open a Python shell or IDE (like Mu, Thonny or IDLE), import `RGBXmasTree` and
 initialise your tree:
 
