@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from tree import RGBXmasTree
 import random
 
@@ -14,4 +16,5 @@ try:
         pixel = random.choice(tree)
         pixel.color = random_color()
 except KeyboardInterrupt:
+    tree.off()
     tree.close()

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from tree import RGBXmasTree
 from colorzero import Color
 from time import sleep
@@ -12,4 +14,5 @@ try:
             tree.color = color
             sleep(1)
 except KeyboardInterrupt:
+    tree.off()
     tree.close()

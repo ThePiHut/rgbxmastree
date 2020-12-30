@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from tree import RGBXmasTree
 from colorzero import Color
 
@@ -11,4 +13,5 @@ try:
             for pixel in tree:
                 pixel.color = color
 except KeyboardInterrupt:
+    tree.off()
     tree.close()
