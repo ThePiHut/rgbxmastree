@@ -1,6 +1,10 @@
 # rgbxmastree
 
-Code examples for the RGB Xmas Tree
+Code examples for the RGB Xmas Tree.
+
+> You should be using `python3` instead of `python` to run the scripts. 
+>
+> While the `tree.py` works with python 2, the other examples (such as `randomsparkles.py`) will not work unless python 3 is used.
 
 ## Getting started
 
@@ -30,6 +34,12 @@ from tree import RGBXmasTree
 
 tree = RGBXmasTree()
 ```
+
+## Autorun on boot
+
+If you wish to run the program on boot, the easiest way (when using Raspbian) is to edit the `~/.bashrc` file and add `python3 ~/Documents/tree.py` at the end. (Assuming your have your `tree.py` file located in `~/Documents`)
+
+This way, when you turn on your Raspberry Pi, the tree will illuminate after 30-60 seconds (depending on which Raspberry Pi is being used, Raspberry Pi Zero boots after about 60 seconds).
 
 ## Change the colour
 
