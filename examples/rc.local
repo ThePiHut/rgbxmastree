@@ -1,0 +1,14 @@
+#!/bin/sh -e
+#
+# EXAMPLE rc.local to automatically start the tree flashing on reboot
+#
+# copy this file to /etc for auto start
+
+# change REPO_FOLDER to point to a clone of of git://github.com/ThePiHut/rgbxmastree.git
+REPO_FOLDER=/home/pi/rgbxmastree
+
+cd $REPO_FOLDER
+export PYTHONPATH=$REPO_FOLDER
+python3 examples/flow.py & 2> /tmp/rc.local.out
+
+exit 0
