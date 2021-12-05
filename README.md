@@ -91,6 +91,14 @@ To control a specific pixel, you can access it by its index number (0-24):
 tree[0].color = (0, 1, 0)
 ```
 
+## Fast batch update of multiple pixels
+
+tree = RGBXmasTree(auto_update=False)
+tree[0] = (1,0,0)
+tree[1] = (1,1,0)
+tree[2] = (1,0,1)
+tree.update()
+
 ## Change the brightness
 
 You can change the brightness from 0 to 1 - the default is 0.5. You can set this
@@ -140,3 +148,11 @@ Cycle through hues forever
 Randomly sparkle all the pixels
 
 - [randomsparkles.py](examples/randomsparkles.py)
+
+### Flow
+
+Colors flow up the rows of pixels.
+
+Uses delayed update of RGBXmasTree for fast changes to all pixels
+
+- [flow.py](examples/flow.py)
