@@ -3,8 +3,7 @@ import random
 from time import sleep
 from itertools import count, cycle
 
-P_NEW_ROUTE = 0.5
-P_MOVE = 1
+P_NEW_ROUTE = 0.25
 SLEEP = 1
 
 tree = RGBXmasTree()
@@ -41,15 +40,15 @@ def turn_off(x):
 current_routes = {}
 next_index = cycle(count(1000000))
 while True:
-    if random.random() < P_NEW_ROUTE:
-        current_routes[next(next_index)] = gen(routes[random.randrange(8)])
+    for r in routes:
+        if random.random() < P_NEW_ROUTE:
+            current_routes[next(next_index)] = gen(r)
 
     for k in sorted(current_routes.keys()):
-        if random.random() < P_MOVE:
-            last, new = next(current_routes[k])
-            turn_off(last)
-            turn_on(new)
-            if new is None:
-                del current_routes[k]
+        last, new = next(current_routes[k])
+        turn_off(last)
+        turn_on(new)
+        if new is None:
+            del current_routes[k]
 
     sleep(SLEEP)
