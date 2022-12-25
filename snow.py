@@ -3,7 +3,7 @@ import random
 from time import sleep
 from itertools import count, cycle
 
-P_NEW_ROUTE = 0.5
+P_NEW_ROUTE = 0.3333333
 SLEEP = 1
 
 tree = RGBXmasTree()
